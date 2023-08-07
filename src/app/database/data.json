@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Dean Lych",
+        "email": "deanlych@gmail.com",
+        "salary": "25000",
+        "date": "2022-06-08",
+        "status": "Active"
+    },
+    {
+        "id": 2,
+        "name": "Garrett Winters",
+        "email": "garrettwindters@gmail.com",
+        "salary": "17000",
+        "date": "2022-06-08",
+        "status": "Inactive"
+    },
+    {
+        "id": 3,
+        "name": "Cedric Kelly",
+        "email": "cedrickelly@gmail.com",
+        "salary": "21000",
+        "date": "2022-06-08",
+        "status": "Active"
+    },
+    {
+        "id": 4,
+        "name": "Airi Satou",
+        "email": "airisatou@gmail.com",
+        "salary": "23000",
+        "date": "2022-06-08",
+        "status": "Active"
+    },
+    {
+        "id": 5,
+        "name": "Haley Kennedy",
+        "email": "haleykennedy@gmail.com",
+        "salary": "20000",
+        "date": "2022-06-08",
+        "status": "Inactive"
+    },
+    {
+        "id": 6,
+        "name": "Michael Silva",
+        "email": "michaelsilva@gmail.com",
+        "salary": "15000",
+        "date": "2022-01-08",
+        "status": "Inactive"
+    },
+    {
+        "id": 7,
+        "name": "Jenette Caldwell",
+        "email": "jenettecaldwell@gmail.com",
+        "salary": "13000",
+        "date": "2022-05-08",
+        "status": "Active"
+    },
+    {
+        "id": 8, 
+        "name": "Yuri Berry",
+        "email": "yuriberry@gmail.com",
+        "salary": "12000",
+        "date": "2022-06-08",
+        "status": "Active"
+    }
+]

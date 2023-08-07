@@ -4,9 +4,22 @@
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
-  min-height: 100vh;
+  height: 50px;
 }
+.container{
+  display: flex;
+  justify-content:center;
+  padding: 5px;
+  margin: auto;
+  border: black;
 
+}
+.inner button{
+  height:60px;
+  width: 70px;
+color: chartreuse;
+float: left;
+}
 .description {
   display: inherit;
   justify-content: inherit;
