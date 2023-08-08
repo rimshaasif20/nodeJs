@@ -1,16 +1,20 @@
-import { ADD_USER, UPDATE_USER, DELETE_USER, EDIT_USER } from './action';
+"use client"
+import { ADD_USER, UPDATE_USER, DELETE_USER, EDIT_USER,FETCH_RECORDS_REQUEST, FETCH_RECORDS_SUCCESS, FETCH_RECORDS_FAILURE } from './action';
 
 const initialState = {
   users: [{msg:"coming from here"}], // Initialize as an empty array
   editingUser: null,
+  records:[],
+   loading: false,
+  error: null
 };
 const UserReducer = (state = initialState, action) => {
 
-console.log("userReducer",action);
+
 
   switch (action.type) {
     case ADD_USER:
-      debugger;
+ 
       return {
         ...state,
         users: [...state.users, action.payload],
@@ -30,6 +34,24 @@ console.log("userReducer",action);
       return {
         ...state,
         users: state.users.filter((user) => user.id !== action.payload),
+      };
+       case FETCH_RECORDS_REQUEST:
+      return {
+        ...state,
+        loading: true
+      };
+    case FETCH_RECORDS_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        records: action.payload,
+        error: null
+      };
+    case FETCH_RECORDS_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload
       };
 
     default:

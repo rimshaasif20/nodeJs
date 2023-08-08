@@ -5,6 +5,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 // store main reducers sy pass hony wala data save krna
 const rootReducer = combineReducers({
   users: UserReducer,
+ records: UserReducer
 });
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunkMiddleWare)));

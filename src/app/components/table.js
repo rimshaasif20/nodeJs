@@ -59,8 +59,12 @@ dispatch(deleteUser(id));
             <TableRow key={user.id} className="bg-gray-50 text-center">
               <TableCell className="px-16 py-2 flex flex-row items-center">
                 <span className="text-center ml-2 font-semibold">
-                  {user.firstname} {user.lastname}
+                  {user.firstname} 
                 </span>
+                <span className="text-center ml-2 font-semibold">
+                  {user.lastname}
+                </span>
+                
               </TableCell>
               <TableCell className="px-16 py-2">
                 <span>{user.email}</span>
