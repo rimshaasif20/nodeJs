@@ -40,7 +40,7 @@ function Home() {
   };
   return (
     <>
-     <h1 className={page.head}>Sign Up</h1>
+     <h1 className={page.head}> Sign Up </h1>
     <div className={page.main}>
       <Formik
         initialValues={initialFormData}
