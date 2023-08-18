@@ -1,0 +1,26 @@
+.menu{
+    display: flex;
+
+}
+.menu li{
+    margin-left:  25px;
+    list-style-type: none;
+}
+.menu li a{
+    text-decoration: none;
+}
+.menu li h3{
+    margin:0;
+}
+.heading{
+    color: crimson;
+   text-align: center;
+    margin-top: 2rem;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.dish{
+margin-right: 10px;
+}
