@@ -5,8 +5,55 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+    border: black;
+}
+/* Add your custom form styles here */
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #060202;
+  border-radius: 4px;
+  background-color: #e9efec;
 }
 
+.form div {
+  margin-bottom: 10px;
+}
+
+.form label {
+  font-weight: bold;
+}
+
+.form input[type="email"],
+.form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form button {
+ float: left;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
 .description {
   display: inherit;
   justify-content: inherit;
@@ -102,6 +149,11 @@
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
+}
+.container form{
+  display: 'flex';
+  justify-content: 'center';
+
 }
 
 .logo {
