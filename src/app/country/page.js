@@ -1,8 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-
 import TableContainer from "@mui/material/TableContainer";
 import Table from "@mui/material/Table";
 import TableHead from "@mui/material/TableHead";
@@ -11,7 +9,6 @@ import TableCell from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
-
 const Country = () => {
   const [data, setData] = useState([]);
 
@@ -21,49 +18,51 @@ const Country = () => {
   }, [data]);
 
   const fetchData = async () => {
-    try {
-        if(search.length>0){
-         
+  try {
+    if (search.length > 2) {
       const response = await axios.get(`https://restcountries.com/v3.1/name/${search}`);
-      const searchedData = response.data;
-      setData(searchedData); 
-        }else{
+      const allData = response.data;
 
-            const response = await axios.get('https://restcountries.com/v3.1/all');
+     
+      // const filteredData = allData.filter(country => country.name.common.slice(0, 3).toLowerCase() === search.slice(0, 3).toLowerCase());
+
+      setData(response.data);
+    } else {
+      const response = await axios.get('https://restcountries.com/v3.1/all');
       const records = response.data;
-      setData(records); // Set the fetched data in the state
-        }
-      
-    } catch (error) {
-      console.error('An error occurred:', error);
+      setData(records); 
     }
-  };
-   const [search, setSearch] = useState("");
+  } catch (error) {
+    console.error('An error occurred:', error);
+  }
+};
 
-const handleSearch = async (e) => {
-    
-   setSearch(e.target.value);
+  const [search, setSearch] = useState("");
+
+  const handleSearch = async (e) => {
+
+    setSearch(e.target.value);
   };
   return (
     <>
       <main className='d-flex justify-content-center py-5'>
-      <div style={{ marginLeft: '10px'}}>
-  <h1 className="d-flex justify-content-center">Countries List</h1>
-      <div className='inner' >
-        <TextField
-          type='text'
-          label='Search by name'
-          value={search}
-          placeholder='Search by name'
-          onChange={handleSearch}
-        />
-        {/* <div style={{ marginTop: '10px'}} >
+        <div style={{ marginLeft: '10px' }}>
+          <h1 className="d-flex justify-content-center">Countries List</h1>
+          <div className='inner' >
+            <TextField
+              type='text'
+              label='Search by name'
+              value={search}
+              placeholder='Search by name'
+              onChange={handleSearch}
+            />
+            {/* <div style={{ marginTop: '10px'}} >
         <Button variant='contained' onClick={handleSearch}>Search</Button>
         </div> */}
-      </div>
-   </div>
+          </div>
+        </div>
         <TableContainer component={Paper}>
-        
+
           <Table className="min-w-full table-auto">
             <TableHead>
               <TableRow className="bg-gray-800">
@@ -103,7 +102,7 @@ const handleSearch = async (e) => {
                   </TableCell>
                   <TableCell className="px-16 py-2">
                     <span>
-                     
+
                       <img
                         src={record.flags?.png || ''}
                         alt="Flag"
