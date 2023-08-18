@@ -10,6 +10,7 @@ function SignIn() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 const router= useRouter();
+
 const user= JSON.parse(localStorage.getItem("user"));
     const handleSubmit = async (e) => {
         e.preventDefault();
